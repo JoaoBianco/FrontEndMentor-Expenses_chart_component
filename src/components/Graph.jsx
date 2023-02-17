@@ -14,7 +14,7 @@ const Graph = ({ data, totalValue, biggestValue }) => {
           biggestValue === data.amount ? "graph--accent" : ""
         } `}
       ></div>
-      <div className="graph--day">{data.day}</div>
+      <div className="color-500">{data.day}</div>
     </div>
   );
 };

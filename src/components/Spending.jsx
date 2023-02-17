@@ -9,7 +9,6 @@ const Spending = () => {
   function calcTotal(values) {
     let totalValue = 0;
     values.map((e) => (totalValue += e.amount));
-    // Math.max()
     return totalValue;
   }
 
@@ -36,15 +35,15 @@ const Spending = () => {
           />
         ))}
       </div>
-      <hr />
+      <div className="line rounded"></div>
       <div className="spending__total">
         <div className="spending__value">
-          <h2>Total this month</h2>
-          <p>$</p>
+          <h2 className="color-500">Total this month</h2>
+          <p>${calcTotal(data)}</p>
         </div>
         <div className="spending__last">
           <p>+2.4%</p>
-          <p>from last month</p>
+          <p className="color-500">from last month</p>
         </div>
       </div>
     </div>
