@@ -96,7 +96,7 @@ body {
 .spending__graphs {
   display: flex;
   justify-content: space-evenly;
-  gap: var(--spacer-400);
+  gap: clamp(5px, 1vw, var(--spacer-400));
   flex-wrap: wrap;
   height: 40vh;
 }
@@ -182,4 +182,10 @@ body {
 
   padding: 5px;
   display: none;
+}
+
+@media (min-width: 32em) {
+  .main > * {
+    max-width: 32em;
+  }
 }
