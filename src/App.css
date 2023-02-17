@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --clr__red: hsl(10, 79%, 65%);
+  --clr__cyan: hsl(186, 34%, 60%);
+  --clr__brown-400: hsl(25, 47%, 15%);
+  --clr__brown-500: hsl(28, 10%, 53%);
+  --clr__cream: hsl(27, 66%, 92%);
+  --clr__orange: hsl(33, 100%, 98%);
+
+  --fs-300: 0.85rem;
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --borderRadius-400: 15px;
+
+  --spacer-400: 1rem;
+  --spacer-500: 1.5rem;
+  --spacer-600: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Utilities */
+
+.container {
+  padding: var(--spacer-500);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rounded {
+  border-radius: var(--borderRadius-400);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* App */
+
+body {
+  min-height: 100vh;
 }
 
-.card {
-  padding: 2em;
+.main {
+  background-color: var(--clr__cream);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacer-400);
 }
 
-.read-the-docs {
-  color: #888;
+.main > * {
+  width: 100%;
+}
+
+/* Balance */
+
+.balance {
+  background-color: var(--clr__red);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--clr__orange);
+}
+
+.balance h2 {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-400);
+}
+
+.balance p {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-700);
+}
+
+/* Spending */
+
+.spending {
+  background-color: var(--clr__orange);
 }
