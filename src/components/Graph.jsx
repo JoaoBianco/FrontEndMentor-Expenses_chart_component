@@ -13,7 +13,9 @@ const Graph = ({ data, totalValue, biggestValue }) => {
         className={`graph--amount ${
           biggestValue === data.amount ? "graph--accent" : ""
         } `}
-      ></div>
+      >
+        <div className="tooltipGraph">${data.amount}</div>
+      </div>
       <div className="color-500">{data.day}</div>
     </div>
   );

@@ -1,6 +1,8 @@
 :root {
   --clr__red: hsl(10, 79%, 65%);
+  --clr__red--300: hsl(10, 79%, 65%, 0.5);
   --clr__cyan: hsl(186, 34%, 60%);
+  --clr__cyan--300: hsla(186, 34%, 60%, 0.5);
   --clr__brown-400: hsl(25, 47%, 15%);
   --clr__brown-500: hsl(28, 10%, 53%);
   --clr__cream: hsl(27, 66%, 92%);
@@ -20,6 +22,7 @@
   --spacer-400: 1rem;
   --spacer-500: 1.5rem;
   --spacer-600: 2rem;
+  --spacer-700: 2.5rem;
 }
 
 /* Utilities */
@@ -140,4 +143,43 @@ body {
 
 .graph--accent {
   background-color: var(--clr__cyan);
+}
+
+.graph--accent,
+.graph--amount {
+  position: relative;
+}
+
+.graph--amount:hover {
+  background-color: var(--clr__red--300);
+}
+
+.graph--accent:hover {
+  background-color: var(--clr__cyan--300);
+}
+
+.graph--accent:hover,
+.graph--amount:hover {
+  cursor: pointer;
+}
+
+.graph--accent:hover .tooltipGraph,
+.graph--amount:hover .tooltipGraph {
+  display: block;
+  opacity: 1;
+}
+
+/* tooltip graph */
+
+.tooltipGraph {
+  position: absolute;
+  top: calc(-1 * var(--spacer-700));
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--clr__brown-400);
+  color: var(--clr__cream);
+  border-radius: var(--borderRadius-300);
+
+  padding: 5px;
+  display: none;
 }
