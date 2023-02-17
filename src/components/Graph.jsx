@@ -1,6 +1,7 @@
 import React from "react";
 
-const Graph = ({ data, totalValue }) => {
+const Graph = ({ data, totalValue, biggestValue }) => {
+  console.log(biggestValue);
   function roundValue(value) {
     return Math.ceil((Math.ceil(value) / totalValue) * 200);
   }
@@ -9,7 +10,9 @@ const Graph = ({ data, totalValue }) => {
     <div className="graph">
       <div
         style={{ height: `${roundValue(data.amount)}%` }}
-        className="graph--amount"
+        className={`graph--amount ${
+          biggestValue === data.amount ? "graph--accent" : ""
+        } `}
       ></div>
       <div className="graph--day">{data.day}</div>
     </div>

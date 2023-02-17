@@ -13,6 +13,7 @@
   --fw-400: 400;
   --fw-700: 700;
 
+  --borderRadius-300: 5px;
   --borderRadius-400: 15px;
 
   --spacer-400: 1rem;
@@ -98,4 +99,9 @@ body {
 
 .graph--amount {
   background-color: var(--clr__red);
+  border-radius: var(--borderRadius-300);
+}
+
+.graph--accent {
+  background-color: var(--clr__cyan);
 }
