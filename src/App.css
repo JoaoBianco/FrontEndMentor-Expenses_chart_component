@@ -167,6 +167,7 @@ body {
 .graph--amount:hover .tooltipGraph {
   display: block;
   opacity: 1;
+  z-index: 3;
 }
 
 /* tooltip graph */
